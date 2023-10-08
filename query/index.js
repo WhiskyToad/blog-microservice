@@ -56,7 +56,7 @@ app.listen(4002, async () => {
 
     for (let event of res.data) {
         console.log('processing event', event.type)
+        handleEvent(event.type, event.data)
     }
     
-    handleEvent(event.type, event.data)
 })
